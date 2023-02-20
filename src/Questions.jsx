@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const Question = (props) => {
     const allAnswer = [
         ...props.value.incorrect_answers,
@@ -112,14 +113,12 @@ export default function Questions() {
                                 }
                                 /5 correct answers
                             </div>
-                            <button
-                                onClick={() => {
-                                    window.location.reload();
-                                }}
+                            <Link
+                                to="/questions"
                                 className="bg-primary text-white px-8 pt-4 pb-5 text-2xl rounded-2xl mt-4 w-fit m-auto"
                             >
                                 Play again
-                            </button>
+                            </Link>
                         </div>
                     ) : (
                         <button

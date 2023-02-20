@@ -21,10 +21,8 @@ function Home() {
                 <h1 className="text-4xl font-semibold text-slate-700 mb-3">
                     Quizzical
                 </h1>
-                <p className="text-xl text-slate-700">
-                    Some description if needed
-                </p>
-                <Link to={"/questions"}>
+                <p className="text-xl text-slate-700">An internet game</p>
+                <Link to="/questions">
                     <button className="bg-primary text-xl w-2/5 text-white px-8 pt-4 pb-5 rounded-2xl mt-4">
                         Start quiz !
                     </button>
