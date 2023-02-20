@@ -26,7 +26,7 @@ function Home() {
                 </p>
                 <Link to={"/questions"}>
                     <button className="bg-primary text-xl w-2/5 text-white px-8 pt-4 pb-5 rounded-2xl mt-4">
-                        Start quiz
+                        Start quiz !
                     </button>
                 </Link>
             </div>
