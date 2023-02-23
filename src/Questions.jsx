@@ -112,9 +112,8 @@ export default function Questions() {
                                 /5 correct answers
                             </div>
                             <Link
-                                to="/questions"
+                                to="/"
                                 className="px-8 pt-2 pb-3 m-auto text-2xl text-white bg-primary rounded-2xl w-fit"
-                                onClick={window.location.reload}
                             >
                                 Play again
                             </Link>
