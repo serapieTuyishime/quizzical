@@ -64,26 +64,29 @@ export default function Questions() {
             .then((data) => {
                 setData(data.results);
                 setAllClientAnswer(
-                    data.results.map((obj) => ({ ...obj, isCollect: false }))
+                    data.results.map((obj) => ({
+                        ...obj,
+                        isCollect: false,
+                    }))
                 );
             });
     }, []);
 
     return (
-        <div className="relative main">
+        <div className="w-full h-full main">
             <img
                 src="/assets/blob 5.png"
                 alt="blob 5"
                 width={297}
                 height={235}
-                className="absolute top-0 hidden lg:block -right-20"
+                className="absolute top-0 right-0 hidden lg:block"
             />
             <img
                 src="/assets/blob 5 (1).png"
                 alt="blob 6"
                 width={297}
                 height={235}
-                className="absolute bottom-0 hidden -left-20 lg:block"
+                className="absolute bottom-0 left-0 hidden lg:block"
             />
             <div className="relative flex items-center justify-center mx-auto overflow-x-hidden lg:h-screen">
                 <div className="flex flex-col gap-3 ">
@@ -118,16 +121,18 @@ export default function Questions() {
                                 Play again
                             </Link>
                         </div>
+                    ) : data.length === 0 ? (
+                        <label className="w-full px-8 pt-4 pb-5 mx-auto text-xl text-white bg-primary max-w-max rounded-2xl ">
+                            Please wait
+                        </label>
                     ) : (
                         <button
                             onClick={() => {
-                                setCheckAns(true);
+                                if (data.length === 0) setCheckAns(true);
                             }}
                             className="w-full px-8 pt-4 pb-5 mx-auto text-xl text-white bg-primary max-w-max rounded-2xl "
                         >
-                            {data.length === 0
-                                ? "please wait"
-                                : "Check answers"}
+                            Check answers
                         </button>
                     )}
                 </div>
