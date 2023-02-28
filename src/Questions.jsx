@@ -128,7 +128,7 @@ export default function Questions() {
                     ) : (
                         <button
                             onClick={() => {
-                                if (data.length === 0) setCheckAns(true);
+                                setCheckAns(true);
                             }}
                             className="w-full px-8 pt-4 pb-5 mx-auto text-xl text-white bg-primary max-w-max rounded-2xl "
                         >
